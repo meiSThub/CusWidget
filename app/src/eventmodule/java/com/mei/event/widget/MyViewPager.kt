@@ -15,10 +15,10 @@ import kotlin.math.min
 /**
  * @date 2021/1/5
  * @author mxb
- * @desc 滑动冲突，外部拦截法
+ * @desc 自定义一个ViewPagers，并解决滑动冲突，外部拦截法
  * @desired
  */
-class HorizontalScrollViewEx : ViewGroup {
+class MyViewPager : ViewGroup {
 
     private val TAG = "HorizontalScrollViewEx"
 
@@ -177,6 +177,7 @@ class HorizontalScrollViewEx : ViewGroup {
                 mVelocityTracker.computeCurrentVelocity(1000)
                 // 水平滑动的速度
                 var velocityX = mVelocityTracker.xVelocity
+                Log.i(TAG, "onTouchEvent: velocityX=$velocityX")
                 mChildIndex = if (abs(velocityX) >= 50) {
                     if (velocityX > 0) mChildIndex - 1 else mChildIndex + 1
                 } else {
