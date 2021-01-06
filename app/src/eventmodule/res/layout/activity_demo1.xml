@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <com.mei.event.widget.HorizontalScrollViewEx
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/list_view1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#C6D8C7" />
+
+        <ListView
+            android:id="@+id/list_view2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:background="#7A9F4D" />
+
+        <ListView
+            android:id="@+id/list_view3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:background="#B6BF5C" />
+
+        <ListView
+            android:id="@+id/list_view4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#9F8B50" />
+
+        <ListView
+            android:id="@+id/list_view5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#A1614D" />
+    </com.mei.event.widget.HorizontalScrollViewEx>
+
+</LinearLayout>
