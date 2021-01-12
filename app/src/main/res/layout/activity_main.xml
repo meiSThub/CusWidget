@@ -4,14 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         android:onClick="viewEvent"
+        android:padding="10dp"
         android:text="View的事件体系"
+        android:textAllCaps="false"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="animation"
+        android:padding="10dp"
+        android:text="Android动画"
+        android:textAllCaps="false"
         tools:ignore="OnClick" />
 
 

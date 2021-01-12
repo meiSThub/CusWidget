@@ -16,10 +16,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--View事件-->
         <activity android:name="com.mei.event.EventMainActivity"></activity>
         <activity android:name="com.mei.event.TestActivity"></activity>
         <activity android:name="com.mei.event.DemoActivity1"></activity>
         <activity android:name="com.mei.event.DemoActivity2"></activity>
+
+        <!--Vie动画-->
+        <activity android:name="com.mei.animation.AnimationMainActivity" />
+        <activity android:name="com.mei.animation.ViewAnimationActivity" />
+        <activity android:name="com.mei.animation.LayoutAnimationActivity" />
+        <activity android:name="com.mei.animation.PropertyAnimationActivity" />
     </application>
 
 </manifest>

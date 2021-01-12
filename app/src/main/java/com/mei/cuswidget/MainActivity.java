@@ -1,5 +1,6 @@
 package com.mei.cuswidget;
 
+import com.mei.animation.AnimationMainActivity;
 import com.mei.event.EventMainActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, EventMainActivity.class));
     }
 
+    public void animation(View view) {
+        startActivity(new Intent(this, AnimationMainActivity.class));
+    }
     // @Override
     // public boolean dispatchTouchEvent(MotionEvent ev) {
     //     Log.i("ScrollSelfView", "MainActivity dispatchTouchEvent: ----" + ev.getAction());
