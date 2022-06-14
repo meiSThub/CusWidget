@@ -87,26 +87,26 @@ public class ScrollSelfView extends ViewGroup {
         try {
             Class aClass = getClass().getSuperclass();
             Field mFirstTouchTarget = aClass.getDeclaredField("mFirstTouchTarget");
-            Log.i(TAG, "getView: mFirstTouchTargetField=" + mFirstTouchTarget);
+            Log.i(TAG, "ScrollSelfView#getView: mFirstTouchTargetField=" + mFirstTouchTarget);
             mFirstTouchTarget.setAccessible(true);
             Object o = mFirstTouchTarget.get(this);
-            Log.i(TAG, "getView: mFirstTouchTarget=" + o);
+            Log.i(TAG, "ScrollSelfView#getView: mFirstTouchTarget=" + o);
             Class<?> targetClass = o.getClass();
             Field childField = targetClass.getDeclaredField("child");
             childField.setAccessible(true);
-            Log.i(TAG, "getView: childField=" + childField);
+            Log.i(TAG, "ScrollSelfView#getView: childField=" + childField);
             Object targetView = childField.get(o);
-            Log.i(TAG, "getView: targetView=" + targetView);
+            Log.i(TAG, "ScrollSelfView#getView: targetView=" + targetView);
 
             Field nextField = targetClass.getDeclaredField("next");
             nextField.setAccessible(true);
-            Log.i(TAG, "getView: next=" + nextField.get(o));
+            Log.i(TAG, "ScrollSelfView#getView: next=" + nextField.get(o));
 
             Field groupFlagsField = aClass.getDeclaredField("mGroupFlags");
             groupFlagsField.setAccessible(true);
             int groupFlag = (int) groupFlagsField.get(this);
             boolean intercept = (groupFlag & 0x80000) == 0;
-            Log.i(TAG, "getView: mGroupFlags=" + groupFlagsField.get(this) + ";intercept="
+            Log.i(TAG, "ScrollSelfView#getView: mGroupFlags=" + groupFlagsField.get(this) + ";intercept="
                     + intercept);
         } catch (Exception e) {
             e.printStackTrace();

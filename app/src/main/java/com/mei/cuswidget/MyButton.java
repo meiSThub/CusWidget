@@ -33,14 +33,19 @@ public class MyButton extends View {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
-        Log.i(TAG, " MyView dispatchTouchEvent: event=" + getEventType(event));
+        Log.i(TAG, " MyButton dispatchTouchEvent: event=" + getEventType(event));
+        // if (event.getAction()==MotionEvent.ACTION_DOWN){
+        //     getParent().requestDisallowInterceptTouchEvent(true);
+        // }else {
+        //     getParent().requestDisallowInterceptTouchEvent(false);
+        // }
         super.dispatchTouchEvent(event);
         return true;
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.i(TAG, " MyView onTouchEvent: event=" + getEventType(event));
+        Log.i(TAG, " MyButton onTouchEvent: event=" + getEventType(event));
         return true;
     }
 
